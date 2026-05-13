@@ -748,9 +748,6 @@ public class ApplicationLifecycleService extends AbstractIdleService {
    */
   @Nullable
   public ApplicationDetail getAppDetailIfAlreadyDeployed(ApplicationId appId, AppRequest<?> appRequest) throws Exception {
-    if (!Feature.SKIP_DUPLICATE_APP_DEPLOYMENT.isEnabled(featureFlagsProvider)) {
-      return null;
-    }
     ApplicationMeta appMeta = store.getLatest(appId.getAppReference());
     if (appMeta == null || appMeta.getSpec() == null) {
       return null;

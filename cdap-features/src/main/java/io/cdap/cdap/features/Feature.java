@@ -20,13 +20,10 @@ import io.cdap.cdap.api.PlatformInfo;
 import io.cdap.cdap.api.feature.FeatureFlagsProvider;
 
 /**
- * Defines Features Flags to be used in CDAP. Features take the version that
- * they were introduced as
- * a first parameter. Optionally they can take a second parameter to define
- * their default behavior
- * if they are not present in configuration. By default, features default to
- * enabled after they are
- * introduced, and disabled before they were introduced
+ * Defines Features Flags to be used in CDAP. Features take the version that they were introduced as a first parameter.
+ * Optionally they can take a second parameter to define their default behavior if they are not present in
+ * configuration.
+ * By default, features default to enabled after they are introduced, and disabled before they were introduced.
  */
 public enum Feature {
   REPLICATION_TRANSFORMATIONS("6.6.0"),
